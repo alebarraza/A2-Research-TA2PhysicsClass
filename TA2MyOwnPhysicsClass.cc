@@ -476,6 +476,7 @@ void TA2MyOwnPhysicsClass::Reconstruct()
 		fProton[fNProton] = fCBParticles+i;			//Adding to Proton Array
 		fNProton++;
 		break;*/
+		//Particles ID'd as proton are commented out since we are only interested in tracking a singly photon
 		
 		default: 
 		fUnknown[fNUnknown] = fCBParticles+i;		//Included in "Unknown" list
@@ -497,6 +498,8 @@ void TA2MyOwnPhysicsClass::Reconstruct()
 				fProton[fNProton] = fTAPSParticles+i;	//Adding to proton array
 				fNProton++;
 				break;*/
+				//Particles ID'd as proton are commented out since we are only interested in tracking a singly photon
+		
 				
 				default:
 				fUnknown[fNUnknown] = fTAPSParticles+i;		//Include in "Unknown" list
