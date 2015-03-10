@@ -551,7 +551,7 @@ void TA2MyOwnPhysicsClass::Reconstruct()
 	fNPrompt    = 0;
 	fNRandom    = 0;
 	
-	for ( i = 0; i < fNPhoton; i++) [
+	for ( i = 0; i < fNPhoton; i++) {
 	
 		for (j = 0; j < fNTagg; j++) {
 			
@@ -593,13 +593,22 @@ void TA2MyOwnPhysicsClass::Reconstruct()
 	fNPromptPi0	= 0;
 	fNRandomPi0	= 0;
 	Doubtle_t ProtonRestMass = 938;
+	TLorentzVector ProtonRV(0, 0, 0, ProtonRestMass);
 	
-	for (i = 0; i < fNPi0; i++) {
+	for ( i = 0; i < fNPhoton; i++) {
 	
 		for (j = 0; j < fNTagg; j++) {
 		
 			TA2Particle taggerphoton    = *fTaggedPhoton[j];
-			TLorentzVecotr p4incident, p4missing;
+			
+			TA2Particle photon          = *fPhoton[i];
+			
+			TLorentzVecotr p4incident, p4missing, p4;
+			p4	   = photon.GetP4();
+			p4incident = fP4target[0] + taggerphoton.GetP4();
+			p4missing  = p4incident + ProtonRV   - p4;
+			
+			
 			
 			
 	
