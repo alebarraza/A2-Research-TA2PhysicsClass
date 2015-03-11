@@ -70,14 +70,14 @@ class TA2MyOwnPhysicsClass : public TA2Physics {
 	UInt_t 		fNPhotTemp;		// # of Photons before pi0 ident
 	UInt_t 		fNPhoton;		// # of Photons
 	UInt_t 		fNProton;		// # of Protons
-	UInt_t 		fNPi0;			// # of Pi0
+	//UInt_t 		fNPi0;			// # of Pi0
 	UInt_t 		fNUnknown;		// # of Unknowns
 
 	TA2Particle**   fTaggedPhoton;		// Array to hold Tagger photons
 	TA2Particle**	fPhotTemp;		// Array to hold photons before pi0 ident
 	TA2Particle** 	fPhoton; 		// Array to hold photons	
 	TA2Particle** 	fProton;		// Array to hold protons
-	TA2Particle** 	fPi0;			// Array to hold Pi0s
+	//TA2Particle** 	fPi0;			// Array to hold Pi0s
 	TA2Particle** 	fUnknown;		// Array to hold unknowns
 
 	Double_t*	fPhotonEnergy;		// Energy of all photons
@@ -90,24 +90,24 @@ class TA2MyOwnPhysicsClass : public TA2Physics {
 	Double_t*	fProtonPhi;		// Phi of all protons
 	Double_t*	fProtonTime;		// Time of all protons
 
-	Double_t*	fPi0Energy;		// Energy of all Pi0
-	Double_t*	fPi0Theta;		// Theta of all Pi0
-	Double_t*	fPi0Phi;		// Phi of all Pi0
-	Double_t*	fPi0Time;		// Time of all Pi0
+	//Double_t*	fPi0Energy;		// Energy of all Pi0
+	//Double_t*	fPi0Theta;		// Theta of all Pi0
+	//Double_t*	fPi0Phi;		// Phi of all Pi0
+	//Double_t*	fPi0Time;		// Time of all Pi0
 
-	Int_t		fNPionPhoton;		// # of photons which reconstruted into pion
-	Bool_t*		fIsPionPhoton;		// Array to mark pion photons
-	Int_t 		fPi0InvMassCut1;	//
-	Int_t		fPi0InvMassCut2;
+	//Int_t		fNPionPhoton;		// # of photons which reconstruted into pion
+	//Bool_t*		fIsPionPhoton;		// Array to mark pion photons
+	//Int_t 		fPi0InvMassCut1;	//
+	//Int_t		fPi0InvMassCut2;
 
 	UInt_t		fNTagg;
 	Int_t*		fTaggerChannel;
 	Double_t*	fTaggerTime;
 	Double_t*	fTaggerPhotonTime;
-	Double_t*	fTaggerPi0Time;
+	//Double_t*	fTaggerPi0Time;
 
-	Int_t	 	fN2PhotonInvariantMass;
-	Double_t* 	f2PhotonInvariantMass;
+	//Int_t	 	fN2PhotonInvariantMass;
+	//Double_t* 	f2PhotonInvariantMass;
 
 	Int_t		fPhotTimePL;
 	Int_t		fPhotTimePR;
@@ -130,18 +130,22 @@ class TA2MyOwnPhysicsClass : public TA2Physics {
 	Double_t*	fPhotonPhiPrompt;
 	Double_t*	fPhotonPhiRandom;
 
-	Int_t		fPi0TimePL;
+	/*Int_t		fPi0TimePL;
 	Int_t		fPi0TimePR;
 	Int_t		fPi0TimeRL1;
 	Int_t		fPi0TimeRR1;
 	Int_t		fPi0TimeRL2;
-	Int_t		fPi0TimeRR2;
+	Int_t		fPi0TimeRR2;*/
 
-	Int_t		fNTaggNPi0;
+	/*Int_t		fNTaggNPi0;
 	Int_t		fNPromptPi0;
-	Int_t		fNRandomPi0;
+	Int_t		fNRandomPi0;*/
+	
+	Int_t		fNTaggNPro;
+	Int_t		fNPromptPro;
+	Int-t		fNRandomPro;
 
-	Double_t	fPromptRandomRatioPi0;
+	/*Double_t	fPromptRandomRatioPi0;
 	Int_t*		fTaggerChannelPromptPi0;
 	Int_t*		fTaggerChannelRandomPi0;
 	Double_t*	fMissingMassPromptPi0;
@@ -149,11 +153,19 @@ class TA2MyOwnPhysicsClass : public TA2Physics {
 	Double_t*	fPi0ThetaPrompt;
 	Double_t*	fPi0ThetaRandom;
 	Double_t*	fPi0PhiPrompt;
-	Double_t*	fPi0PhiRandom;
+	Double_t*	fPi0PhiRandom;*/
+	
+	Double_t 	fPromptRandomRatioPro;
+	Int_t*		fTaggerChannelPromptPro;
+	Int_t*		fTaggerChannelRandomPro;
+	Double_t*	fMissingMassPromptPro;
+	Double_t*	fMissingMassrandomPro;
+	    
 
 	Double_t	fCBESum;
 	Int_t		fNaINCluster;
 	Int_t		fBaF2NCluster;
+	Double_t 	ProtonRestMass
 	
 	//This authored by Cristina Collicot
 	
