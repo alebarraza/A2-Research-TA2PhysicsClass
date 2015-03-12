@@ -76,7 +76,7 @@ class TA2MyOwnPhysicsClass : public TA2Physics {
 	TA2Particle**   fTaggedPhoton;		// Array to hold Tagger photons
 	TA2Particle**	fPhotTemp;		// Array to hold photons before pi0 ident
 	TA2Particle** 	fPhoton; 		// Array to hold photons	
-	TA2Particle** 	fProton;		// Array to hold protons
+	//TA2Particle** 	fProton;		// Array to hold protons
 	//TA2Particle** 	fPi0;			// Array to hold Pi0s
 	TA2Particle** 	fUnknown;		// Array to hold unknowns
 
@@ -85,10 +85,10 @@ class TA2MyOwnPhysicsClass : public TA2Physics {
 	Double_t*	fPhotonPhi;		// Phi of all photons
 	Double_t*	fPhotonTime;		// Time of all photons
 
-	Double_t*	fProtonEnergy;		// Energy of all protons
+	/*Double_t*	fProtonEnergy;		// Energy of all protons
 	Double_t*	fProtonTheta;		// Theta of all protons
 	Double_t*	fProtonPhi;		// Phi of all protons
-	Double_t*	fProtonTime;		// Time of all protons
+	Double_t*	fProtonTime;		// Time of all protons*/
 
 	//Double_t*	fPi0Energy;		// Energy of all Pi0
 	//Double_t*	fPi0Theta;		// Theta of all Pi0
@@ -159,7 +159,7 @@ class TA2MyOwnPhysicsClass : public TA2Physics {
 	Int_t*		fTaggerChannelPromptPro;
 	Int_t*		fTaggerChannelRandomPro;
 	Double_t*	fMissingMassPromptPro;
-	Double_t*	fMissingMassrandomPro;
+	Double_t*	fMissingMassRandomPro;
 	    
 
 	Double_t	fCBESum;
@@ -180,7 +180,7 @@ class TA2MyOwnPhysicsClass : public TA2Physics {
 		virtual void Reconstruct();	// reconstruct detector info
 		virtual TA2DataManager* CreateChild( const char*, Int_t ){ return NULL;}
 		virtual void CloseTrees();
-	ClassDef(MyOwnPhysicsClass,1)
+	ClassDef(TA2MyOwnPhysicsClass,1)
 };
 
 inline void TA2MyOwnPhysicsClass::CloseTrees() {
